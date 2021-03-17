@@ -77,7 +77,7 @@ void to_lower(char str[])
 		{
 			str[i] += 32;
 		}
-		//else if (str[i] == ' ')str[i] += 16;
+		//else if (str[i] == '.')str[i] += 16;
 	}
 }
 
