@@ -1,9 +1,6 @@
 ﻿#include <iostream>
 #include<Windows.h>
-#include<ctype.h>
-using std::cin;
-using std::cout;
-using std::endl;
+using namespace std;
 
 void InputLine(char str[], const int n);
 int StrLen(char str[]); // Возвращает размер строки
