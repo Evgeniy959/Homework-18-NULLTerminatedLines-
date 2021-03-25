@@ -106,12 +106,13 @@ void shrink(char str[])
 {
 	for (int i = 0; str[i]; i++)
 	{
-		while (str[i] == ' ' && (str[i + 1] == ' '|| str[i + 1] = 0 || str[0] == ' ')
+		if ((str[i] == ' ' && (str[i + 1] == ' '|| str[i + 1] == 0)) || str[0] == ' ')
 		{
 			for (int j = i; str[j]; j++)
 			{
 				str[j] = str[j + 1];
 			}
+			i--;
 		}
 	}
 }
@@ -120,9 +121,9 @@ void remove_symbol(char str[], char symbol)
 {
 	for (int i = 0; str[i]; i++)
 	{
-		while (str[i] == symbol)
+		if (str[i] == symbol)
 		{
-			for (int j = i; str[j]; j++)str[j] = str[j + 1]; n--;
+			for (int j = i; str[j]; j++)str[j] = str[j + 1]; i--;
 		}
 	}
 }
